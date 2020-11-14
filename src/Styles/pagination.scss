@@ -1,0 +1,32 @@
+.pagination {
+  width: 150px;
+  height: 40px;
+  margin: auto;
+  margin-top: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  .btn {
+    width: 65px;
+    height: 35px;
+    background: #2b2d42;
+    outline: none;
+    border: none;
+    border-radius: 15px;
+    color: #edf2f4;
+    cursor: pointer;
+  }
+
+  .not-allow {
+    width: 65px;
+    height: 35px;
+    background: #2b2d42;
+    outline: none;
+    border: none;
+    border-radius: 15px;
+    color: #edf2f4;
+    cursor: not-allowed;
+    opacity: 0.5;
+  }
+}

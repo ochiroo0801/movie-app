@@ -1,0 +1,50 @@
+@import "./variables.scss";
+@import "./mixin.scss";
+
+.moviesContainer {
+  width: 100%;
+  margin: auto;
+  margin-top: 60px;
+  display: flex;
+  grid-gap: 20px;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 10px;
+  overflow-x: scroll;
+  overflow-y: hidden;
+
+  @media (min-width: $Medium) {
+    margin-top: 80px;
+  }
+
+  @media (min-width: $Medium) {
+    max-width: 1500px;
+    flex-wrap: wrap;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    justify-content: center;
+    height: 750px;
+  }
+
+  &::-webkit-scrollbar {
+    width: 8px;
+    border-radius: 999px;
+    background: #8d99ae;
+    transition: 0.3s;
+  }
+  &::-webkit-scrollbar-thumb {
+    background: #8d99ae;
+    border-radius: 999px;
+    transition: 0.3s;
+  }
+
+  &:hover {
+    &::-webkit-scrollbar {
+      background: rgba(0, 0, 0, 0.281);
+    }
+
+    &::-webkit-scrollbar-thumb {
+      background: $mainColor;
+    }
+  }
+}
