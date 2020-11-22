@@ -1,13 +1,13 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useContext } from "react";
 import "../Styles/trailer.scss";
 import { API_KEY, API_URL } from "../config";
 import ReactPlayer from "react-player/lazy";
 import PreLoader from "./PreLoader";
 import { Link } from "react-router-dom";
+import { MovieContext } from "../Context/MovieContext";
 
 function Trailer({ match }) {
-  const [trailer, setTrailer] = useState({});
-  const [loading, setLoading] = useState(false);
+  const { trailer, setTrailer, setLoading, loading } = useContext(MovieContext);
 
   const id = match.params.id;
   const youtubeUrl = trailer[0];
@@ -31,8 +31,6 @@ function Trailer({ match }) {
         url={`https://www.youtube.com/watch?v=${
           youtubeUrl ? youtubeUrl.key : null
         } `}
-        width="50%"
-        height="50%"
       />
     </Link>
   );
